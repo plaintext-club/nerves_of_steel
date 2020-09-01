@@ -29,11 +29,11 @@ You can finally stop having to swap SD cards in and out of the device!
 
 ## Troubleshooting
 
-### No secret keybase found
+### No secret key base found
 
 Just go to a Phoenix project and generate a new key using `mix phx.gen.secret`.
 Later on add the generated key to your env by putting the following in your `~/.bashrc`:
 
 ```
-export SECRET_KEY_BASE=uhxakjhsdkhj
+export SECRET_KEY_BASE=your_key_goes_here
 ```
