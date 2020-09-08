@@ -5,7 +5,10 @@ defmodule JsonApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", JsonApiWeb do
+  scope "/", JsonApiWeb do
     pipe_through :api
+
+    get "/led/enable", LedController, :enable
+    get "/led/disable", LedController, :disable
   end
 end

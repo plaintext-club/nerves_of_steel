@@ -33,6 +33,7 @@ defmodule JsonApi.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:led, path: "../led"},
       {:phoenix, "~> 1.5.4"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
