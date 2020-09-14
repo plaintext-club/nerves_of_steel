@@ -10,5 +10,9 @@ defmodule JsonApiWeb.Router do
 
     get "/led/enable", LedController, :enable
     get "/led/disable", LedController, :disable
+
+    get "/gpio/read", GpioController, :read
+    get "/gpio/write/:value", GpioController, :write
+    get "/gpio/setup", GpioController, :setup
   end
 end

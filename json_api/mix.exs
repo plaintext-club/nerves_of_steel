@@ -34,6 +34,7 @@ defmodule JsonApi.MixProject do
   defp deps do
     [
       {:led, path: "../led"},
+      {:circuits_gpio, "~> 0.4"},
       {:phoenix, "~> 1.5.4"},
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
