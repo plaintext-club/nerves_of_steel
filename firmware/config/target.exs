@@ -43,12 +43,25 @@ config :vintage_net,
   regulatory_domain: "US",
   config: [
     {"usb0", %{type: VintageNetDirect}},
-    {"eth0",
-     %{
-       type: VintageNetEthernet,
-       ipv4: %{method: :dhcp}
-     }},
-    {"wlan0", %{type: VintageNetWiFi}}
+    {
+      "eth0",
+      %{
+        type: VintageNetEthernet,
+        ipv4: %{method: :dhcp}
+      }
+    },
+    {
+      "wlan0",
+      %{
+        type: VintageNetWiFi,
+        vintage_net_wifi: %{
+          key_mgmt: :wpa_psk,
+          ssid: System.get_env("NERVES_NETWORK_SSID"),
+          psk: System.get_env("NERVES_NETWORK_PSK")
+        },
+        ipv4: %{method: :dhcp}
+      }
+    }
   ]
 
 config :mdns_lite,
